@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Frames in One File</title>
+</head>
+
+<!-- Divide page into 2 rows -->
+<frameset rows="25%,75%">
+
+    <!-- Top Frame -->
+    <frame src="data:text/html,
+        <html>
+        <body style='background-color:lightblue; text-align:center;'>
+        <h1>WELCOME TO MY UNIQUE FRAME PAGE</h1>
+        </body>
+        </html>">
+
+    <!-- Bottom Section divided into 2 columns -->
+    <frameset cols="30%,70%">
+
+        <!-- Left Frame -->
+        <frame src="data:text/html,
+            <html>
+            <body style='background-color:lightgray;'>
+            <h3>MENU</h3>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+            </body>
+            </html>">
+
+        <!-- Right Frame containing IFRAME -->
+        <frame src="data:text/html,
+            <html>
+            <body style='background-color:white; text-align:center;'>
+            <h2>Main Content Area</h2>
+            <p>Below is an IFRAME inside a FRAME</p>
+
+            <iframe srcdoc=
+            '<html>
+            <body style=&quot;background-color:lightyellow; text-align:center;&quot;>
+            <h3>This is inside IFRAME</h3>
+            <p>All created in ONE single file!</p>
+            </body>
+            </html>'
+            width='90%' height='150'>
+            </iframe>
+
+            </body>
+            </html>">
+
+    </frameset>
+
+</frameset>
+
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Technology Lab – Anurag Dubey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        /* ── Header ── */
+        header {
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 1rem;
+            color: rgba(255,255,255,0.75);
+        }
+
+        header .badge {
+            display: inline-block;
+            margin-top: 16px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* ── Main grid ── */
+        main {
+            max-width: 1100px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c33764;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+
+        /* ── Card ── */
+        .card {
+            background: #1a1a2e;
+            border: 1px solid #2a2a45;
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1d2671, #c33764);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: #c33764;
+            box-shadow: 0 12px 32px rgba(195, 55, 100, 0.2);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-number {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #c33764;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.3;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: #9090b0;
+            line-height: 1.5;
+            flex: 1;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: rgba(29, 38, 113, 0.5);
+            border: 1px solid #2a2a55;
+            color: #8888cc;
+            font-size: 0.72rem;
+            padding: 3px 10px;
+            border-radius: 12px;
+            align-self: flex-start;
+        }
+
+        .card-arrow {
+            font-size: 0.8rem;
+            color: #c33764;
+            align-self: flex-end;
+            margin-top: 4px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: #555570;
+            font-size: 0.82rem;
+            border-top: 1px solid #1e1e35;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Web Technology Lab</h1>
+    <p>Practical Experiments – S5 | Computer Science & Engineering</p>
+    <span class="badge">Anurag Dubey &nbsp;·&nbsp; S5-116</span>
+</header>
+
+<main>
+
+    <p class="section-label">HTML Experiments</p>
+    <div class="grid">
+
+        <a class="card" href="1exp.html">
+            <span class="card-number">Experiment 1</span>
+            <span class="card-title">Hello World – Static Web Page</span>
+            <span class="card-desc">A basic HTML page demonstrating the minimal structure of a web document with a "Hello World" paragraph.</span>
+            <span class="card-tag">HTML Basics</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="text_formatting.html">
+            <span class="card-number">Experiment 3</span>
+            <span class="card-title">Text Formatting Tags</span>
+            <span class="card-desc">Demonstrates bold, italic, underline, mark, subscript, superscript, code, del, ins, and other inline formatting tags.</span>
+            <span class="card-tag">Text Formatting</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="4exp.html">
+            <span class="card-number">Experiment 4</span>
+            <span class="card-title">HTML List Tags</span>
+            <span class="card-desc">Covers ordered lists (numeric, alphabetic, Roman) and unordered lists with disc, circle, and square bullet styles.</span>
+            <span class="card-tag">Lists</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="list.html">
+            <span class="card-number">Experiment 4b</span>
+            <span class="card-title">Lists – Extended Demo</span>
+            <span class="card-desc">Additional list examples covering all ordered and unordered list types with varied content.</span>
+            <span class="card-tag">Lists</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="5exp.html">
+            <span class="card-number">Experiment 5</span>
+            <span class="card-title">Image Tag</span>
+            <span class="card-desc">Embeds an external image using the &lt;img&gt; tag with src, alt, width, and height attributes.</span>
+            <span class="card-tag">Images</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="6exp.html">
+            <span class="card-number">Experiment 6</span>
+            <span class="card-title">Frames &amp; IFrame</span>
+            <span class="card-desc">Demonstrates nested &lt;frameset&gt; layouts (rows and columns) with an embedded &lt;iframe&gt; inside a frame.</span>
+            <span class="card-tag">Frames</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="7exp.html">
+            <span class="card-number">Experiment 7</span>
+            <span class="card-title">Hyperlink Tags</span>
+            <span class="card-desc">Covers external links, internal anchor links, email links, phone links, and images used as hyperlinks.</span>
+            <span class="card-tag">Links</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="8exp.html">
+            <span class="card-number">Experiment 8</span>
+            <span class="card-title">Class Timetable – HTML Table</span>
+            <span class="card-desc">A weekly class schedule built with &lt;table&gt;, using rowspan for the lunch break column.</span>
+            <span class="card-tag">Tables</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="9exp.html">
+            <span class="card-number">Experiment 9</span>
+            <span class="card-title">Employee Registration Form</span>
+            <span class="card-desc">A styled multi-section form with personal, professional, and account details — includes text, email, radio, select, file, and password inputs.</span>
+            <span class="card-tag">Forms · CSS</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+    </div>
+
+    <p class="section-label">CSS &amp; Styled Pages</p>
+    <div class="grid">
+
+        <a class="card" href="10exp/index.html">
+            <span class="card-number">Experiment 10</span>
+            <span class="card-title">Professional Resume Page</span>
+            <span class="card-desc">A two-column resume layout for Anurag Dubey built with external CSS — sidebar with skills and a main body with education, projects, and achievements.</span>
+            <span class="card-tag">CSS Layout</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+    </div>
+
+    <p class="section-label">XML Experiments</p>
+    <div class="grid">
+
+        <a class="card" href="11exp/library.xml">
+            <span class="card-number">Experiment 11</span>
+            <span class="card-title">Library Catalog – XML + CSS</span>
+            <span class="card-desc">An XML document representing a library catalog styled directly with a CSS stylesheet linked via a processing instruction.</span>
+            <span class="card-tag">XML · CSS</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="12exp/cdcatlog.xml">
+            <span class="card-number">Experiment 12</span>
+            <span class="card-title">CD Catalog – XML + XSLT</span>
+            <span class="card-desc">A CD catalog XML file transformed into an HTML table using an XSL stylesheet. Includes title, artist, country, price, and year.</span>
+            <span class="card-tag">XML · XSLT</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+        <a class="card" href="13exp/student.xml">
+            <span class="card-number">Experiment 13</span>
+            <span class="card-title">Student Records – XML + XSLT</span>
+            <span class="card-desc">Student data (roll number, name, nickname, marks) stored in XML and rendered via an XSL transformation.</span>
+            <span class="card-tag">XML · XSLT</span>
+            <span class="card-arrow">Open →</span>
+        </a>
+
+    </div>
+
+</main>
+
+<footer>
+    Web Technology Lab &nbsp;·&nbsp; Anurag Dubey (S5-116) &nbsp;·&nbsp; D.Y. Patil College of Engineering and Technology
+</footer>
+
+</body>
+</html>

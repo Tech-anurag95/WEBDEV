@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Employee Registration</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 700px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-title {
+    margin: 20px 0 10px;
+    font-size: 18px;
+    color: #444;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.input-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #6a5acd;
+    box-shadow: 0 0 8px rgba(106,90,205,0.5);
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.gender-group {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6a5acd, #00c9a7);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Employee Registration - Software Company</h2>
+
+    <form>
+
+        <!-- Personal Details -->
+        <div class="section-title">Personal Details</div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>First Name</label>
+                <input type="text" required>
+            </div>
+            <div class="input-group">
+                <label>Last Name</label>
+                <input type="text" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" required>
+            </div>
+            <div class="input-group">
+                <label>Phone</label>
+                <input type="tel" required>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Address</label>
+            <textarea rows="2"></textarea>
+        </div>
+
+        <div class="input-group">
+            <label>Gender</label>
+            <div class="gender-group">
+                <label><input type="radio" name="gender"> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+                <label><input type="radio" name="gender"> Other</label>
+            </div>
+        </div>
+
+        <!-- Professional Details -->
+        <div class="section-title">Professional Details</div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Department</label>
+                <select>
+                    <option>Choose</option>
+                    <option>Software Development</option>
+                    <option>QA / Testing</option>
+                    <option>DevOps</option>
+                    <option>UI/UX Design</option>
+                    <option>HR</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Job Role</label>
+                <input type="text" placeholder="e.g. Frontend Developer">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Experience (Years)</label>
+                <input type="number">
+            </div>
+
+            <div class="input-group">
+                <label>Primary Skills</label>
+                <input type="text" placeholder="Java, Python, React...">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>LinkedIn Profile</label>
+            <input type="url">
+        </div>
+
+        <!-- Account Details -->
+        <div class="section-title">Account Details</div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Employee ID</label>
+                <input type="text">
+            </div>
+
+            <div class="input-group">
+                <label>Date of Joining</label>
+                <input type="date">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password">
+            </div>
+
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password">
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label>Upload Resume</label>
+            <input type="file">
+        </div>
+
+        <button class="btn">Register Employee</button>
+
+    </form>
+</div>
+
+</body>
+</html>
